@@ -1,0 +1,13 @@
+{
+  "name": "macro-terminal",
+  "version": "0.4.0",
+  "description": "Institutional Macro Intelligence Terminal - C++23 (4-file consolidated build)",
+  "dependencies": [
+    "glfw3",
+    "glad",
+    { "name": "imgui", "features": ["glfw-binding", "opengl3-binding", "docking-experimental"] },
+    "nlohmann-json",
+    "eigen3",
+    "curl"
+  ]
+}
