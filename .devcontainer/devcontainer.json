@@ -1,0 +1,7 @@
+{
+  "name": "Macro Terminal (4-file build)",
+  "image": "mcr.microsoft.com/devcontainers/cpp:1-ubuntu-24.04",
+  "onCreateCommand": "sudo apt-get update -qq && sudo apt-get install -y ninja-build libgl1-mesa-dev libx11-dev libxrandr-dev libxi-dev libxinerama-dev libxcursor-dev libcurl4-openssl-dev libssl-dev xvfb gcc-13 g++-13 && sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 100 --slave /usr/bin/g++ g++ /usr/bin/g++-13 && git clone --depth 1 https://github.com/microsoft/vcpkg.git /usr/local/vcpkg && sudo /usr/local/vcpkg/bootstrap-vcpkg.sh -disableMetrics && sudo chmod -R 777 /usr/local/vcpkg",
+  "containerEnv": { "VCPKG_ROOT": "/usr/local/vcpkg" },
+  "customizations": { "vscode": { "extensions": ["ms-vscode.cpptools", "ms-vscode.cmake-tools"] } }
+}
